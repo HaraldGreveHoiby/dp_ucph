@@ -9,7 +9,7 @@ def solve_VFI(par):
     # 2. parameters for VFI
     max_iter = par.max_iter # maximum number of iterations
     tol = par.tol #convergence tol. level
-    
+
     delta = 1000 # difference between V_next and V_now
     it = 0  #iteration counter 
     V_now = np.zeros([par.W+1]) #arbitrary starting values
@@ -23,7 +23,11 @@ def solve_VFI(par):
         for w_i in range(par.W+1):
             
             # FILL IN. 
-
+            c = np.arange(w_i+1)
+            w_next = w_i - c
+            V_search = np.sqrt(c) + par.beta*V_now[w_next]
+            V_next[w_i] = np.amax(V_search)
+            Cstar[w_i] = c[np.argmax(V_search)]
 
 
             
