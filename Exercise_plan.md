@@ -2,7 +2,7 @@
 
 
 ## [Part I: Theory and tools](https://github.com/bschjerning/dp_ucph/tree/main/1_theory_tools)                                                      
-
+test 
 | Week |TA |  Exercise | Topic | New Method| Additional files |
 |------|----------|-------|-------|------------------| ----|
 | 7    |  Mikkel |1        | [Cake-eating problem in a finite horizon](https://github.com/bschjerning/dp_ucph/blob/main/1_theory_tools/exercises/ex_ante/01_cake_eating_finite.ipynb)   | Backwards Induction       | [Exercise_1.py](https://github.com/bschjerning/dp_ucph/blob/main/1_theory_tools/exercises/ex_ante/Exercise_1.py)              |
