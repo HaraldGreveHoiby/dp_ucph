@@ -14,4 +14,7 @@
 .DS_Store
 *-checkpoint.ipynb
 4_dynamic_games/z_source_not_shared
-2_dynamic_discrete_choice/zurcher_pytnon/*.*
+2_dynamic_discrete_choice/zurcher_pytnon
+2_dynamic_discrete_choice/z_source_not_shared
+3_discrete_continuous_choice/z_source_not_shared
+4_dynamic_games/z_private_repo
