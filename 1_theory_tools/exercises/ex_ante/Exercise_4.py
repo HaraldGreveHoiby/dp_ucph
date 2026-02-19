@@ -26,14 +26,12 @@ def solve_consumption_uncertainty(par):
             EV_next = 0
         
             if t<par.T-1: # no EV_next in last period
-                pass # delete this, just there to make import work with no code in loop
-                
                 # FILL IN.
                 # Hint: 1) Loop through shock probability and values, e.g. by using the zip function
                 #       2) Interpolate value function for the new state given each shock
                 #       3) Add probability-weighted contribution to expectation
-
-
+                for pi_i, eps_i in zip(par.pi, par.eps):
+                    EV_next += pi_i * np.interp(w_c + eps_i, sol.grid_W[:,t+1], sol.V[:,t+1])
 
                 
             V_guess = np.sqrt(c)+par.beta*EV_next

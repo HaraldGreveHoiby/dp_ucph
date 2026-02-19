@@ -30,8 +30,11 @@ def solve_consumption_grid_search(par):
             #       2) Use c to calculate V_search using interpolation
             #       3) In order to interpolate use: np.interp
             #       4) Proceed as in Exercise_2.py, only new thing is interpolation
-
-
+            c = grid_C * w_i
+            w_next = w_i - c
+            V_search = np.sqrt(c) + par.beta*np.interp(w_next, par.grid_W, sol.V)
+            V_next[iw] = np.amax(V_search)
+            sol.C[iw] = c[np.argmax(V_search)]
 
       
         delta = np.amax(np.abs(sol.V - V_next))
