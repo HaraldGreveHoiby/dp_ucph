@@ -21,7 +21,7 @@ def plot1d(f=None, x0=None, fx0=None, fhat=None, a=None, b=None, color='b',label
     if a is None: a=np.min(x0); 
     if b is None: b=np.max(x0);
     x = np.linspace(a,b,1000) # for plotting func of interst on [a,b]
-    if fx0 is not None : plt.scatter(x0,fx0,color='r') # interpolation data
+    if fx0 is not None : plt.scatter(np.ravel(x0), np.ravel(fx0), c='r', s=50) # interpolation data
     if f is not None: 
         plt.plot(x,f(x),color='grey', label='f(x)') # true function
     if fhat is not None:
